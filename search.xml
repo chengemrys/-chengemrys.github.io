@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Github 克隆私人仓库报错</title>
+    <url>/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p> 当克隆某一私有项目时报错 </p>
+<img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/image-20241202113128459.png" class=""title="image-20241202113128459">
+
+<p> 就算这个私有项目是我所有。</p>
+<span id="more"></span>
+<p> 通过查阅资料，首先重新 generate token。点击头像，选择 settings&gt;Developer settings&gt;Personal access tokens, 点击 generate new tokens，生成新的 tokens 后复制。</p>
+<img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/59a781ff15575689eb37ae3a921b2963.jpeg" class=""title="img">
+
+<img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/e1afa7b78a0e0fe7624c8fea43dd8f2b.jpeg" class=""title="img">
+
+<p> 按照以下的格式重新 clone 仓库即可：</p>
+<p> 其中 useName 用自己的用户名替换，token 用刚刚复制的 token 值替换。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://userName:token@github.com/EmmaammE/CohortVA.git</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EmrysCheng的技术博客</title>
+  
+  <subtitle>专注于后端邻域开发</subtitle>
+  <link href="http://emryscheng.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://emryscheng.github.io/"/>
+  <updated>2024-12-02T13:22:19.203Z</updated>
+  <id>http://emryscheng.github.io/</id>
+  
+  <author>
+    <name>EmrysCheng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github 克隆私人仓库报错</title>
+    <link href="http://emryscheng.github.io/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/"/>
+    <id>http://emryscheng.github.io/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/</id>
+    <published>2024-12-02T03:28:37.000Z</published>
+    <updated>2024-12-02T13:22:19.203Z</updated>
+    
+    <content type="html"><![CDATA[<p> 当克隆某一私有项目时报错 </p><img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/image-20241202113128459.png" class=""title="image-20241202113128459"><p> 就算这个私有项目是我所有。</p><span id="more"></span><p> 通过查阅资料，首先重新 generate token。点击头像，选择 settings&gt;Developer settings&gt;Personal access tokens, 点击 generate new tokens，生成新的 tokens 后复制。</p><img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/59a781ff15575689eb37ae3a921b2963.jpeg" class=""title="img"><img src="/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/e1afa7b78a0e0fe7624c8fea43dd8f2b.jpeg" class=""title="img"><p> 按照以下的格式重新 clone 仓库即可：</p><p> 其中 useName 用自己的用户名替换，token 用刚刚复制的 token 值替换。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://userName:token@github.com/EmmaammE/CohortVA.git</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;当克隆某一私有项目时报错&lt;/p&gt;
+&lt;img src=&quot;/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/image-20241202113128459.png&quot; class=&quot;&quot; title=&quot;image-20241202113128459&quot;&gt;
+
+&lt;p&gt;就算这个私有项目是我所有。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Github" scheme="http://emryscheng.github.io/categories/Github/"/>
+    
+    
+    <category term="Github" scheme="http://emryscheng.github.io/tags/Github/"/>
+    
+    <category term="Git" scheme="http://emryscheng.github.io/tags/Git/"/>
+    
+  </entry>
+  
+</feed>

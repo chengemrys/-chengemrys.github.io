@@ -36,7 +36,7 @@
   <meta name="description" content="本博客主要分享后端开发相关内容">
 <meta property="og:type" content="website">
 <meta property="og:title" content="EmrysCheng的技术博客">
-<meta property="og:url" content="http://emryscheng.github.io/index.html">
+<meta property="og:url" content="https://emryscheng.github.io/index.html">
 <meta property="og:site_name" content="EmrysCheng的技术博客">
 <meta property="og:description" content="本博客主要分享后端开发相关内容">
 <meta property="og:locale" content="zh_CN">
@@ -44,7 +44,7 @@
 <meta property="article:tag" content="Java,Hexo,后端开发">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://emryscheng.github.io/">
+<link rel="canonical" href="https://emryscheng.github.io/">
 
 
 <script id="page-configurations">
@@ -184,7 +184,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emryscheng.github.io/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/">
+    <link itemprop="mainEntityOfPage" href="https://emryscheng.github.io/2025/01/01/Windows%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90%E7%9A%84%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%B9%B6%E4%BD%BF%E7%94%A8Nginx%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="EmrysCheng">
+      <meta itemprop="description" content="本博客主要分享后端开发相关内容">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EmrysCheng的技术博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/01/Windows%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90%E7%9A%84%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%B9%B6%E4%BD%BF%E7%94%A8Nginx%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">Windows 使用 OpenSSL 生成的自签名证书并使用 Nginx 配置反向代理.md</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-01-01 23:09:20 / 修改时间：23:47:46" itemprop="dateCreated datePublished" datetime="2025-01-01T23:09:20+08:00">2025-01-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">反向代理</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/OpenSSL/" itemprop="url" rel="index"><span itemprop="name">OpenSSL</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/OpenSSL/%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">自签名证书</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL"></a>OpenSSL</h2><h3 id="安装 OpenSSL"><a href="# 安装 OpenSSL" class="headerlink" title="安装 OpenSSL"></a>安装 OpenSSL</h3><h4 id="下载 OpenSSL 安装包"><a href="# 下载 OpenSSL 安装包" class="headerlink" title="下载 OpenSSL 安装包"></a>下载 OpenSSL 安装包 </h4><p> 前往<a target="_blank" rel="noopener" href="https://slproweb.com/products/Win32OpenSSL.html">https://slproweb.com/products/Win32OpenSSL.html</a> 下载 win OpenSSL 安装包</p>
+<p>exe 和 msi 二选一即可。注意，我们 Light 版本是轻量版，我们直接下载完整版本。</p>
+<img src="/2025/01/01/Windows%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90%E7%9A%84%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%B9%B6%E4%BD%BF%E7%94%A8Nginx%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/image-20250101231603366.png" class title="image-20250101231603366">
+
+<p>下载下来是 Win64OpenSSL_Light-3_1_1.msi</p>
+<h4 id="安装"><a href="# 安装" class="headerlink" title="安装"></a>安装 </h4><p> 安装过程多数选择默认即可。</p>
+<p>注意在选择将 OpenSSL 的 DLL 安装到 <code>Windows/System/</code> 下还是安装目录的 bin 目录下时，我们选择 <code>bin</code> 目录，&#x3D;&#x3D; 避免 System 目录下其他软件的 DLL 影响 OpenSSL&#x3D;&#x3D;</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/01/Windows%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90%E7%9A%84%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%B9%B6%E4%BD%BF%E7%94%A8Nginx%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://emryscheng.github.io/2024/12/02/Github%E5%85%8B%E9%9A%86%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -324,20 +417,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -372,7 +465,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -384,7 +477,7 @@
   </div> -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共110字</span>
+  <span class="post-count">博客全站共1.4k字</span>
 </div>
         
 
